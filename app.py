@@ -40,6 +40,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     r = random.randint(1, 2)
+    s = '滾'
     msg = event.message.text
     if msg == '今天要吃什麼':
         s = '等我一下'
@@ -48,9 +49,7 @@ def handle_message(event):
         elif r == 2:
             s = '今天吃魚'
     elif meg == '謝謝你':
-        s = '不客氣'
-    else:
-        s = '滾' 
+           s = '不客氣' 
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=s))
