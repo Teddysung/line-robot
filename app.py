@@ -52,7 +52,7 @@ def handle_message(event):
     #        s = '不客氣' 
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=s + r))
+        TextSendMessage(text=s))
 
 
 if __name__ == "__main__":
